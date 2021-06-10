@@ -8,7 +8,14 @@
       <script src="script.js"></script>
     </head>
 
-
+<style>
+  .operators {
+    margin: auto;
+  width: 10%;
+  border: 3px solid green;
+  padding: 10px;
+  }
+</style>
 
 
     <div class="div2">
@@ -30,7 +37,7 @@
               <br>
               <button ng-repeat="n in [0]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
               <button class="button" ng-click="result=calc(op,firstNumber,secondNumber)">=</button>
-              <button class="button2"ng-repeat="(key,val) in operators" ng-click="$parent.op=key">{{key}}</button>  
+              <button class="button2 operators"ng-repeat="(key,val) in operators" ng-click="$parent.op=key">{{key}}</button>  
             </div>
           </div>
         </div>

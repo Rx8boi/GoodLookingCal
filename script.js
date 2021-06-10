@@ -1,4 +1,4 @@
-var myApp = angular.module('GoodLookingApp', []);
+var myApp = angular.module('GoodLookingCal', []);
 
  myApp.controller('calculatorCtrl', function($scope) {
    

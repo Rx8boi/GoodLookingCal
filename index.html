@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html>
   <div class="div1">
-<head>
-  <script data-require="angular.js@1.4.0-beta.6" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular.js"></script>
- 
-  <link href="style.css" rel="stylesheet" />
-  <script src="script.js"></script>
-</head>
-<div class="div2">
-<body>
-<h1><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/AngularJS_logo.svg" width="600" height="180"><br>Calculator</h1>
+
+    <head>
+      <script data-require="angular.js@1.4.0-beta.6" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular.js"></script>
+      <link href="style.css" rel="stylesheet" />
+      <script src="script.js"></script>
+    </head>
 
 
-  <div ng-app="GoodLookingApp">
-    <div ng-controller="calculatorCtrl" ng-init='cal=true' id="container">
 
-     <div class="offset4 span6 well">
-       <input ng-model="firstNumber" {{ op }} type="text" ng-focus='cal="firstNumber"'>
-     
-       <h2><button class="button2"ng-repeat="(key,val) in operators" ng-click="$parent.op=key">{{key}}</button> {{ op }} </h2>
 
-       <input ng-model="secondNumber" type="text" ng-focus='cal="secondNumber"'>
-       <br/>
-       <h2><br>Result: {{result}}</h2>
-
- 
-       <button ng-repeat="n in [1,2,3]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
-        <br>
-       <button ng-repeat="n in [4,5,6]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
-       <br>
-        <button ng-repeat="n in [7,8,9]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
-        <br>
-        <button ng-repeat="n in [0]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
-        <button class="button" ng-click="result=calc(op,firstNumber,secondNumber)">=</button>  
-       </div>
+    <div class="div2">
+      <body>
+        <h1><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/AngularJS_logo.svg" width="600" height="180"><br>Calculator</h1>
+        <div ng-app="GoodLookingCal">
+          <div ng-controller="calculatorCtrl" ng-init='cal=true' id="container">
+            <div class="offset4 span6 well">
+              <input ng-model="firstNumber" {{ op }} type="text" ng-focus='cal="firstNumber"'>
+              <h2><button class="button2"ng-repeat="(key,val) in operators" ng-click="$parent.op=key">{{key}}</button> {{ op }} </h2>
+              <input ng-model="secondNumber" type="text" ng-focus='cal="secondNumber"'>
+              <br/>
+              <h2><br>Result: {{result}}</h2>
+              <button ng-repeat="n in [1,2,3]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
+              <br>
+              <button ng-repeat="n in [4,5,6]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
+              <br>
+              <button ng-repeat="n in [7,8,9]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
+              <br>
+              <button ng-repeat="n in [0]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
+              <button class="button" ng-click="result=calc(op,firstNumber,secondNumber)">=</button>  
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
-</div>
-</body>
+  </body>
+
 </html>

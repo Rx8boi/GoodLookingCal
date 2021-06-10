@@ -32,6 +32,8 @@
   font-size: 27px;
   margin: 1px;
   cursor: pointer;
+  position: inherit;
+  width: 58%;
 }
 
 .button2 {

@@ -17,8 +17,8 @@
         <div ng-app="GoodLookingCal">
           <div ng-controller="calculatorCtrl" ng-init='cal=true' id="container">
             <div class="offset4 span6 well">
-              <input ng-model="firstNumber" {{ op }} type="text" ng-focus='cal="firstNumber"'>
-              <h2><button class="button2"ng-repeat="(key,val) in operators" ng-click="$parent.op=key">{{key}}</button> {{ op }} </h2>
+              <input ng-model="firstNumber" type="text" ng-focus='cal="firstNumber"'>
+               {{ op }}
               <input ng-model="secondNumber" type="text" ng-focus='cal="secondNumber"'>
               <br/>
               <h2><br>Result: {{result}}</h2>
@@ -29,7 +29,8 @@
               <button ng-repeat="n in [7,8,9]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
               <br>
               <button ng-repeat="n in [0]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
-              <button class="button" ng-click="result=calc(op,firstNumber,secondNumber)">=</button>  
+              <button class="button" ng-click="result=calc(op,firstNumber,secondNumber)">=</button>
+              <button class="button2"ng-repeat="(key,val) in operators" ng-click="$parent.op=key">{{key}}</button>  
             </div>
           </div>
         </div>

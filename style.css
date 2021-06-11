@@ -48,7 +48,7 @@ input:focus {outline:none!important;}
   display: inline-block;
   font-size: 25px;
   margin: 4px 2px;
-  cursor: crosshair;
+  cursor: pointer;
 }
 .column {
  
@@ -74,6 +74,5 @@ body {
 button {
     cursor: pointer;
     padding: 25px 55px;
-    width: 8;
     font-size: 25px;
 }

@@ -25,9 +25,9 @@
   }
 </style>
 
-
+<body>
     <div class="div2">
-      <body>
+      
         <h1><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/AngularJS_logo.svg" width="600" height="180"><br>Calculator</h1>
         <div ng-app="GoodLookingCal">
           <div ng-controller="calculatorCtrl" ng-init='cal=true' id="container">
@@ -37,6 +37,7 @@
               <input ng-model="secondNumber" type="text" ng-focus='cal="secondNumber"'>
               <br/>
               <h2><br>Result: {{result}}</h2>
+              <div class="cbuttons">
               <button ng-repeat="n in [1,2,3]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
               <br>
               <button ng-repeat="n in [4,5,6]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
@@ -46,6 +47,7 @@
               <button ng-repeat="n in [0]" ng-click='$parent[cal]=$parent[cal]+""+n'>{{n}}</button>
               <button class="button" ng-click="result=calc(op,firstNumber,secondNumber)">=</button>
               <button class="operators"ng-repeat="(key,val) in operators" ng-click="$parent.op=key">{{key}}</button>  
+            </div>
             </div>
           </div>
         </div>

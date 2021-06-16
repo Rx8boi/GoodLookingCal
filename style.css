@@ -24,18 +24,19 @@ input:focus {outline:none!important;}
 }
 
 .button {
-  background-color: #919691;
+  /* background-color: #919691; */
+  background-color: pink;
   border: rgb(14, 13, 13);
   color: white;
-  padding: 25px 118px;
+  /* padding: 25px 118px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 27px;
   margin: 1px;
   cursor: pointer;
-  position: inherit;
-  width: 58%;
+  /* position: inherit; */
+  width: 59%;
 }
 
 .button2 {
@@ -75,4 +76,10 @@ button {
     cursor: pointer;
     padding: 25px 55px;
     font-size: 25px;
+}
+
+.cbuttons {
+  position: relative;
+  left: 130px;
+  bottom: -140px;
 }

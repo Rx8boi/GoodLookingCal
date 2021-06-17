@@ -50,9 +50,21 @@
             </div>
             </div>
           </div>
+                <div class="result-container">
+                  {{firstNumber|| 0 }}
+                   <span ng-if="currentModifier">{{ op }}</span> 
+                   <span ng-if="secondNumber">{{ secondNumber }}</span>
+                   <span ng-if="result" class="result-item"> = {{ result }}</span>
+                   <button class="clear-button" ng-click="clearNumbers()">X</button>
+                </div>
+
+
         </div>
       </div>
     </div>
+
+
+
   </body>
 
 </html>

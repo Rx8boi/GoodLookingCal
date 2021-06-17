@@ -1,6 +1,6 @@
-var myApp = angular.module('GoodLookingCal', []);
+var app = angular.module('GoodLookingCal', []);
 
- myApp.controller('calculatorCtrl', function($scope) {
+ app.controller('calculatorCtrl', function($scope) {
    
    
 
@@ -36,6 +36,12 @@ var myApp = angular.module('GoodLookingCal', []);
      '%': modulus,
      
    };
+     $scope.numArr = [];
+     $scope.firstValue = "";
+     $scope.secondValue = "";
+     $scope.currentModifier = "";
+     var valueFlag = false;
+
    $scope.op = '+';
    $scope.calc = calc;
 

@@ -39,10 +39,35 @@ var app = angular.module('GoodLookingCal', []);
      $scope.numArr = [];
      $scope.firstValue = "";
      $scope.secondValue = "";
-     $scope.currentModifier = "";
+     $scope.currentOperator = "";
      var valueFlag = false;
 
    $scope.op = '+';
    $scope.calc = calc;
 
+
+   function currentValueToShow(num) {
+     assignValues(num);
+   }
+
+   function assignValues(num) {
+     if (valueFlag) {
+       $scope.secondValue += num;
+     } else {
+       $scope.firstValue += num;
+     }
+   }
+
+   $scope.showNumber = currentValueToShow;
+
+   function activateFlag() {
+     valueFlag = true;
+   }
+
+   function setCurrentOperator(operator) {
+     activateFlag();
+     $scope.currentOperator= operator;
+   }
+
+   $scope.makeSecondValue = setCurrentOperator;
  });

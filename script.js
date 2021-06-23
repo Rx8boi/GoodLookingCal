@@ -80,4 +80,14 @@ var app = angular.module('GoodLookingCal', []);
    }
 
    $scope.doMath = evalMath;
+
+      function clearScope() {
+        valueFlag = false;
+        $scope.firstValue = "";
+        $scope.secondValue = "";
+        $scope.currentModifier = "";
+        $scope.result = "";
+      }
+
+      $scope.clearNumbers = clearScope;
  });

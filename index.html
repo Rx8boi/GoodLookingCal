@@ -9,8 +9,8 @@
     </head>
 
 <style>
-  .modify-items {
-    margin: auto;
+  .modify-item{
+    /* margin: auto;
   width: 129px;
   height: 49.8px;
   padding: 10px;
@@ -18,7 +18,8 @@
   top: -333px;
   right: -121px;
   position: relative;
-  border-radius: 5px;
+  border-radius: 5px; */
+ 
   background-color: #919691;
   color: white;
     border: 1px solid rgb(14, 13, 13);
@@ -45,30 +46,32 @@
         <h1><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/AngularJS_logo.svg" width="600" height="180"><br>Calculator</h1>
         <div ng-app="GoodLookingCal">
           <div ng-controller="calculatorCtrl" ng-init='cal=true' id="container">
+            <div class="calculation">
             <div class="offset4 span6 well">
-
-                 <div class="result-container">
+              <div class="result-container">
                 {{firstValue || 0 }}
                 <span ng-if="currentModifier">{{currentModifier}}</span> 
                 <span ng-if="secondValue">{{ secondValue }}</span>
                 <span ng-if="result" class="result-item"> = {{ result }}</span>
-                <button class="clear-button" ng-click="clearNumbers()">C</button>
-            </div>
-            <div class="number-modify-container">
+                
+              </div>
+<hr>
+              <div class="number-modify-container">
                 <div class="number-container">
                     <div class="number-inner-container" ng-repeat="num in numArr">
                         <button class="number-item"  ng-click="showNumber(num)">{{ num }}</button>
-                        
                     </div>
                     <button class="number-item" ng-click="showNumber('.')"> . </button>
-                    <button class="result-button" ng-click="doMath()">=</button>
+                    <button class="clear-button" ng-click="clearNumbers()">c</button>
+                    
                 </div>
                 <div class="modify-container">
                     <button class="modify-item" ng-repeat="mod in modifiers" ng-click="makeSecondValue(mod)">{{ mod }}</button>
                 </div>
+
                 
-            </div>
-            
+              </div>
+            <button class="result-button" ng-click="doMath()">=</button>
               <!-- <input ng-model="firstNumber" type="text" ng-focus='cal="firstNumber"'>
                {{ op }}
               <input ng-model="secondNumber" type="text" ng-focus='cal="secondNumber"'>
@@ -86,6 +89,7 @@
               <button class="button" ng-click="result=calc(op,firstNumber,secondNumber)">=</button>
               <button class="operators"ng-repeat="(key,val) in operators" ng-click="$parent.op=key">{{key}}</button>  
             </div> -->
+            </div>
             </div>
           </div>
 

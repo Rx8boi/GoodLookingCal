@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 
-input {border:0;outline:0;}
-input:focus {outline:none!important;}
+/* input {border:0;outline:0;}
+input:focus {outline:none!important;} */
 
 
 .div1 {
@@ -88,4 +88,10 @@ button {
   position: relative;
   left: 130px;
   bottom: -140px;
+}
+
+.number-modify-container {
+  align-items: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: blue;
 }

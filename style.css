@@ -91,7 +91,15 @@ button {
 }
 
 .number-modify-container {
-  align-items: grid;
+  
+  height: 20%;
+  width: 100%;
+ display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: blue;
+}
+
+.number-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
